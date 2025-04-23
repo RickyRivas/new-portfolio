@@ -33,6 +33,7 @@
 		"vite": "^6.2.5"
 	},
 	"dependencies": {
+		"gsap": "^3.12.7",
 		"less": "^4.3.0",
 		"svelte-preprocess": "^6.0.3"
 	}
