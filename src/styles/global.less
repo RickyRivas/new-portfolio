@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    // colors
+    --primary: #ba5b38;
+    --secondary: #693521;
+
+    // background colors
+    --bg: #fff;
+
+    // text
+    --heading: #1A1A1A;
+    --text: #212121;
+    --link: #3A5133;
+}
+
+// dark theme
+:root.dark {
+    // colors
+    // --primary: #ba5b38;
+    // --secondary: #693521;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+
+    @media (min-width: 1300px) {
+        font-size: 20px;
+    }
+}
+
+
+@h2fs: 26;
+@h3fs: 22;
+@h4fs: 21;
+@h5fs: 20;
+@h6fs: 19;
+
+h1,
+h2:not(.title),
+h3:not(.title),
+h4,
+h5,
+h6 {
+    line-height: 1;
+    color: var(--heading);
+    text-rendering: auto;
+    text-transform: capitalize;
+    margin: 0 0 1em;
+}
+
+h1 {
+    font-size: unit((30/20), em);
+}
+
+h2:not(.title) {
+    font-size: unit((@h2fs/20), em);
+}
+
+h3:not(.title) {
+    font-size: unit((@h3fs/20), em);
+}
+
+h4 {
+    font-size: unit((@h4fs/20), em);
+}
+
+h5 {
+    font-size: unit((@h5fs/20), em);
+}
+
+h6 {
+    font-size: unit((@h6fs/20), em);
+}
+
+p {
+    margin: 0 0 1.58em;
+    line-height: 1.5;
+}
