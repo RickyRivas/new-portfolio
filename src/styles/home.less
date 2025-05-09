@@ -1,7 +1,8 @@
-#hero {
+.hero {
     display: block;
-    .bc(#212121);
     min-height: 900px;
+    position: relative;
+    text-align: center;
 
     @media only screen and (min-width:666px) {}
 
@@ -9,7 +10,20 @@
 
     @media only screen and (min-width:1024px) {}
 
-    .hero__mod {
-        background-color: pink;
+    &__mod {
+        .show;
+        width: 90%;
+        max-width: (800/20em);
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+
+        h1 {
+            @lh: 79; //line-height
+            @fs: 72; //font-size
+            line-height: (@lh/@fs);
+            .fs(~'clamp( 12px,'(@fs/20em) ~','(@fs*1px) ~')');
+            margin: 0;
+        }
     }
 }

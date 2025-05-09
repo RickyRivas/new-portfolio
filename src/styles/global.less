@@ -27,6 +27,7 @@
     // colors
     // --primary: #ba5b38;
     // --secondary: #693521;
+    --bg: #0e1011;
 }
 
 body,
@@ -38,7 +39,7 @@ textarea {
 
 
 body {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    .fontG;
     overflow: hidden;
     position: relative;
     font-size: 16px;
@@ -131,4 +132,17 @@ input[type=number] {
     margin: 0 auto;
 }
 
-svg {}
+svg {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    @lh: 44; //line-height
+    @fs: 20; //font-size
+
+    .lh((@lh/@fs));
+    .fs(~'clamp( 12px,'(@fs/20em) ~','(@fs*1px) ~')');
+    .show;
+    text-decoration: none;
+}
